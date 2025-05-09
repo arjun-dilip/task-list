@@ -1,13 +1,11 @@
 {
   "name": "@task-list/api",
-  "version": "1.0.0",
-  "description": "",
-  "license": "ISC",
-  "author": "",
-  "type": "commonjs",
-  "main": "index.js",
+  "private": true,
+  "version": "0.0.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "DEVELOPMENT=true nodemon src/index.ts",
+    "start": "ts-node src/index.ts"
   },
   "dependencies": {
     "@aws-sdk/client-dynamodb": "^3.806.0",
@@ -16,5 +14,11 @@
     "express": "^5.1.0",
     "nodemon": "^3.1.10",
     "serverless-http": "^3.2.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.18",
+    "@types/express": "^5.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
   }
 }

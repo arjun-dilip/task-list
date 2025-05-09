@@ -1,6 +1,7 @@
 {
   "name": "task-list",
   "version": "1.0.0",
+  "type": "module",
   "workspaces": [
     "packages/api",
     "packages/web"
@@ -8,7 +9,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "web:dev": "cd packages/web && npm run dev",
-    "api:dev": "cd packages/api && npm run dev"
+    "api:dev": "cd packages/api && npm run dev",
+    "api:start": "cd packages/api && npm run start"
   },
   "author": "",
   "license": "ISC",
