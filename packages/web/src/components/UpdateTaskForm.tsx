@@ -1,9 +1,25 @@
 import { useState } from "react";
-import { Button, Dialog, DialogTitle, TextField } from "@mui/material";
+import {
+  Box,
+  Button,
+  Dialog,
+  DialogTitle,
+  styled,
+  TextField,
+} from "@mui/material";
 import CheckIcon from "@mui/icons-material/Check";
 // import axios from "axios";
 import { API_URL } from "../constants";
 import type { TaskProps } from "../App";
+
+const Wrapper = styled(Box)({
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "center",
+  gap: "10px",
+  padding: "10px",
+});
 
 const UpdateTaskForm = ({
   fetchTasks,
@@ -47,7 +63,7 @@ const UpdateTaskForm = ({
   return (
     <Dialog open={isDialogOpen}>
       <DialogTitle>Edit Task</DialogTitle>
-      <div className="dialog">
+      <Wrapper className="dialog">
         <TextField
           size="small"
           label="Task"
@@ -63,7 +79,7 @@ const UpdateTaskForm = ({
         >
           <CheckIcon />
         </Button>
-      </div>
+      </Wrapper>
     </Dialog>
   );
 };
